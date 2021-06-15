@@ -78,7 +78,7 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
-  let result = [];
+
 
   let strArr=str.split('');
   strArr.forEach((item,index)=>{
