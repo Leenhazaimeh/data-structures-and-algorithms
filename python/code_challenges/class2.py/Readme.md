@@ -1,0 +1,1 @@
+![Challenge 02 - array-insert-shift](Capture.PNG)
