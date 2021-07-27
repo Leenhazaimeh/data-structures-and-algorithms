@@ -26,3 +26,9 @@ To run your tests
 
 
 [Challenge 01 - array-reverse](./python/code_challenges/class1.py/Readme.md)
+
+
+[Challenge 02 - array-insert-shift](./python/code_challenges/class2.py/Readme.md)
+
+
+[Challenge 03 - array-binary-search](./python/code_challenges/class3.py/Readme.md)
