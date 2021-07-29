@@ -1,1 +1,1 @@
-![Challenge 03 - array-binary-search](Capture1.PNG)
+![Challenge 03 - array-binary-search](Capture4.PNG)
