@@ -1,59 +1,96 @@
-class Node():
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+    # use a magic method so when you print node you see it's value
 
-    def __init__ (self, d, n = None):
-        self.data = d
-        self.next_node = n
-
-    def get_next (self):
-        return self.next_node
-
-    def get_data (self):
-        return self.data
-
-
-        class Node():
-
-    def __init__ (self, d, n = None):
-        self.data = d
-        self.next_node = n
-
-    def get_next (self):
-        return self.next_node
-
-    def get_data (self):
-        return self.data
-
-
-class LinkedList ():
-
-    def __init__(self, h = None):
-        self.head = h
-        self.size = 0
-
-    def insert (self, d):
-        new_node = Node (d, self.head)
-        self.head = new_node
-        self.size += 1
-        return new_node.data
-
-    def includes (self, d):
-        this_node = self.head
-        while this_node:
-            if this_node.get_data() == d:
-                return True
-            else:
-                this_node = this_node.get_next()
-        return False
     def __str__(self):
+        return f"{self.data}"
+
+
+
+class LinkedList:
+  
+    def __init__(self):
+  
+
+    def insert(self, data=None):
+s any value as an argument and adds a new node with that value to the head of the list 
+        """
+        new_node = Node(data)
+       
         if self.head:
-            saved_data = "{"f"{self.head.data}""} "
-            this_node = self.head
-            while this_node:
-                this_node = this_node.next_node
-                if  this_node:
-                    saved_data += "-> ""{"f"{ this_node.data}""} "
-                else:
-                    saved_data += "-> NULL"
+            new_node.next = self.head  # set our current pointer to the head
+           
+        self.head = new_node
+    
+
+    def includes(self, value):
+
+        current = self.head
+        is_include = False
+        while (current):
+            if current.data == value:
+                is_include = True
+            current = current.next
+        return is_include
+
+    def append(self, data):
+
+        new_data = Node(data)
+        current = self.head
+        if self.head:
+            while(current.next):
+                current = current.next
+            current.next = new_data
         else:
-            return "Your Linked List still empty"
-        return saved_data
+            self.head = new_data
+
+    def insertAfter(self, data, new_data):
+
+        try:
+          if self.includes(data):
+              new_node = Node(new_data)
+              current = self.head
+              while (current):
+                  if current.data == data:
+                      new_node.next = current.next
+                      current.next = new_node
+                      break
+                  current = current.next
+        except:
+          raise Exception("the value not found in the list")
+
+    def insertBefore(self, data, new_data):
+
+        try:
+            if self.includes(data):
+                new_node = Node(new_data)
+                current = self.head
+                if current.data == data:
+                    new_node.next = self.head
+                    self.head = new_node
+                else:
+                    while (current.next):
+                        if current.next.data == data:
+                            new_node.next = current.next
+                            current.next = new_node
+                            break
+                        current = current.next
+        except:
+          raise Exception("the value not found in the list")
+
+    def __str__(self):
+ 
+       
+        list_data = ""
+      
+        current = self.head
+        while current:
+         
+            list_data += f"{current.data} -> "
+           
+            current = current.next
+        list_data += "NULL"
+       
+        return list_data
