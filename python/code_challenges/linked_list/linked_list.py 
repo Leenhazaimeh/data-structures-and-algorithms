@@ -2,7 +2,7 @@ class Node:
     def __init__(self, data=None):
         self.data = data
         self.next = None
-    # use a magic method so when you print node you see it's value
+    
 
     def __str__(self):
         return f"{self.data}"
@@ -15,8 +15,7 @@ class LinkedList:
   
 
     def insert(self, data=None):
-s any value as an argument and adds a new node with that value to the head of the list 
-        """
+
         new_node = Node(data)
        
         if self.head:
@@ -94,3 +93,13 @@ s any value as an argument and adds a new node with that value to the head of th
         list_data += "NULL"
        
         return list_data
+
+        if __name__ == "__main__":
+    linked = LinkedList()
+    linked.append(1)
+    linked.append(3)
+    linked.append(2)
+    linked.insertAfter(3, 10)
+    linked.insertBefore(100, 7)
+    linked.insertAfter(25,20)
+    print(linked)
