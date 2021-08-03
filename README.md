@@ -32,3 +32,5 @@ To run your tests
 
 
 [Challenge 03 - array-binary-search](./python/code_challenges/class3.py/Readme.md)
+
+[Challenge 04 - linked-list](./python/code_challenges/linked_list/Readme.md)
