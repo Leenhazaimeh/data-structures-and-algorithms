@@ -15,7 +15,6 @@ def data():
   return {'stack':new_stack}
 
 
-
 def test_stack_pushing_one_element(data):
   data['stack'].push(1)
   actual = data['stack'].top.value
@@ -30,6 +29,7 @@ def test_stack_push_lots_of_values():
   test.push(2)
   test.push(3)
   assert test.top.value==3
+
 
 def test_stack_pop_one_element(data):
     data['stack'].push(1)
