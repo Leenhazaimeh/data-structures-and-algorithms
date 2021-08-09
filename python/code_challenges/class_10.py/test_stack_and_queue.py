@@ -31,6 +31,7 @@ def test_stack_push_lots_of_values():
   test.push(3)
   assert test.top.value==3
 
+
 def test_stack_pop_one_element(data):
     data['stack'].push(1)
     data['stack'].push(2)
@@ -127,3 +128,4 @@ def test_dequeue_from_empty_queue():
   test=Queue()
   with pytest.raises(Exception, match ="empty queue" ):
     test.dequeue()
+    
