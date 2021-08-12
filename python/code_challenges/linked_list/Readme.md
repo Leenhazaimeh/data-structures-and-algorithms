@@ -11,3 +11,4 @@ can be viewed as a link or pointer to another node,  singly linked list is a lin
 <!-- Description of each method publicly available to your Linked List -->
 
 ![Challenge 07 - linked-list-kth](Capturekth.PNG)
+![Challenge 08 - linked-list-zip](Capturezip.PNG)

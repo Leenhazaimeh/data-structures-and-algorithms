@@ -3,7 +3,6 @@ class Node:
         self.value = value
         self.next = None
 
- linked-list-zip
 
 class LinkedList():
 
@@ -41,45 +40,6 @@ class LinkedList():
         string += "NULL"
         return string
 
-
-
-class LinkedList():
-
-    def __init__(self):
-        self.head = None
-        self.values=[]
-
-    def insert(self, value):
-        self.values.append(value)
-        node = Node(value)
-
-        if self.head:
-            node.next = self.head
-
-        self.head = node
-
-
-    def includes(self,value):
-        current=self.head
-        while current:
-            if current.value==value:
-                return True
-            else:
-                current=current.next
-        return False
-
-
-    def __str__(self):
-        string = ""
-        current = self.head
-
-        while current:
-            string += f"{str(current.value)} -> "
-            current = current.next
-        string += "NULL"
-        return string
-
-main
     def appendvalue(self,value):
         new_node=Node(value)
         if self.head==None:
@@ -136,40 +96,46 @@ main
         current=self.head
         for x in range(position):
             current=current.next
- linked-list-zip
         return current.value
     
-        # while current:
-        #     sol.append(current.value)
-        #     current=current.next
-        # if len(sol)> num:
-        #     sol.reverse()
-        #     return sol[num]
-        # elif len(sol)==num:
-        #     return 'the k value is the same as the length of the list, please change it'
-        # elif len(sol)<num:
-
-        #     raise Exception
+  
 
         
 
 
+def zip_lists(first:LinkedList,second:LinkedList):
+    var1 =first.head
+    var2=second.head
+    
+    new=LinkedList()
+    while True:
+        if var1:
+            new.appendvalue(var1.value)
+            var1=var1.next
+        
+        if var2:
+            new.appendvalue(var2.value)
+            var2=var2.next
+        
+        if not var1 and not var2 :
+            break
 
+    return new
 
 
 
 if __name__ == "__main__":
-  ll = LinkedList()
-  ll.insert(5)
-  ll.insert(4)
-  print(ll)
-  node1 =  Node(1)
-  node2 =  Node(2)
-  node3 = node1 + node2
-  print(node3)
+    first=LinkedList()
+    second=LinkedList()
+    first.appendvalue(11)
+    first.appendvalue(12)
+    first.appendvalue(13)
+    first.appendvalue(14)
 
-  for value in ll:
-    print(value)
+    second.appendvalue(21)
+    second.appendvalue(22)
+    second.appendvalue(23)
+    second.appendvalue(24)
 
-        return current.value
- main
+    new=zip_lists(first,second)
+    print(new)

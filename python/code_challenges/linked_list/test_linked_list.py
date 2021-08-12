@@ -3,6 +3,13 @@ from linked_list import *
 
 
 
+ linked-list-zip
+
+
+
+
+
+ main
 # Can successfully instantiate an empty linked list
 def test_linkedlist():
     assert LinkedList()
@@ -208,6 +215,10 @@ def test_kth_where_k_is_in_the_middle():
     test.insert(35)
     expected=55
     actual=test.kth_from_end(2)
+ linked-list-zip
+    assert actual==expected
+
     assert actual==expected
 
 
+ main
