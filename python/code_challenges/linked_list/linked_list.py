@@ -3,6 +3,7 @@ class Node:
         self.value = value
         self.next = None
 
+ linked-list-zip
 
 class LinkedList():
 
@@ -40,6 +41,45 @@ class LinkedList():
         string += "NULL"
         return string
 
+
+
+class LinkedList():
+
+    def __init__(self):
+        self.head = None
+        self.values=[]
+
+    def insert(self, value):
+        self.values.append(value)
+        node = Node(value)
+
+        if self.head:
+            node.next = self.head
+
+        self.head = node
+
+
+    def includes(self,value):
+        current=self.head
+        while current:
+            if current.value==value:
+                return True
+            else:
+                current=current.next
+        return False
+
+
+    def __str__(self):
+        string = ""
+        current = self.head
+
+        while current:
+            string += f"{str(current.value)} -> "
+            current = current.next
+        string += "NULL"
+        return string
+
+main
     def appendvalue(self,value):
         new_node=Node(value)
         if self.head==None:
@@ -96,6 +136,7 @@ class LinkedList():
         current=self.head
         for x in range(position):
             current=current.next
+ linked-list-zip
         return current.value
     
         # while current:
@@ -129,3 +170,6 @@ if __name__ == "__main__":
 
   for value in ll:
     print(value)
+
+        return current.value
+ main
