@@ -1,42 +1,50 @@
 import pytest
-from linked_list.linked_list import *
-from challenges.ll_zip.ll_zip import zipLists
-
-def test_zipLists(list1,list2):
-    actual = zipLists(list1,list2)
-    expected = '1 -> 5 -> 3 -> 9 -> 2 -> 4 -> NULL'
-    assert actual == expected
-
-def test_zipLists2(list2):
-    list1 = LinkedList()
-    list1.append(1)
-    list1.append(3)
-    actual = zipLists(list1,list2)
-    expected = '1 -> 5 -> 3 -> 9 -> 4 -> NULL'
-    assert actual == expected
-
-def test_zipLists3(list1):
-    list2 = LinkedList()
-    list2.append(5)
-    list2.append(9)
-    actual = zipLists(list1,list2)
-    expected = '1 -> 5 -> 3 -> 9 -> 2 -> NULL'
-    assert actual == expected
-
-@pytest.fixture
-def list1():
-    list1 = LinkedList()
-    list1.append(1)
-    list1.append(3)
-    list1.append(2)
-    return list1
+from new_linked import *
 
 
-    
-@pytest.fixture
-def list2():
-    list2 = LinkedList()
-    list2.append(5)
-    list2.append(9)
-    list2.append(4)
-    return list2
+def test_zip_list():
+    first=LinkedList()
+    second=LinkedList()
+    first.appendvalue(11)
+    first.appendvalue(12)
+    first.appendvalue(13)
+    first.appendvalue(14)
+    second.appendvalue(21)
+    second.appendvalue(22)
+    second.appendvalue(23)
+    second.appendvalue(24)
+    new=zip_lists(first,second)
+    actual=new.__str__()
+    expected='11 -> 21 -> 12 -> 22 -> 13 -> 23 -> 14 -> 24 -> NULL'
+    assert actual==expected
+
+
+def test_zip_list_first_is_longer():
+    first=LinkedList()
+    second=LinkedList()
+    first.appendvalue(11)
+    first.appendvalue(12)
+    first.appendvalue(13)
+    first.appendvalue(14)
+    second.appendvalue(21)
+    second.appendvalue(22)
+
+    new=zip_lists(first,second)
+    actual=new.__str__()
+    expected='11 -> 21 -> 12 -> 22 -> 13 -> 14 -> NULL'
+    assert actual==expected
+
+
+def test_zip_list_second_is_longer():
+    first=LinkedList()
+    second=LinkedList()
+    first.appendvalue(11)
+    first.appendvalue(12)
+    second.appendvalue(21)
+    second.appendvalue(22)
+    second.appendvalue(23)
+    second.appendvalue(24)
+    new=zip_lists(first,second)
+    actual=new.__str__()
+    expected='11 -> 21 -> 12 -> 22 -> 23 -> 24 -> NULL'
+    assert actual==expected

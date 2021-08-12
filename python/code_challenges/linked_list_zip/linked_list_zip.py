@@ -1,15 +1,45 @@
-from linked_list.linked_list import *
+from new_linked import *
 
-def zipLists(list1,list2):
 
-    linked_lists = LinkedList()
-    current1 = list1.head
-    current2 = list2.head
-    while(current1 or current2):
-        if current1:
-            linked_lists.append(current1.data)
-            current1 = current1.next
-        if current2:
-            linked_list.append(current2.data)
-            current2 = current2.next
-    return f"{linked_lists}"
+
+
+
+
+def zip_lists(first:LinkedList,second:LinkedList):
+    var1 =first.head
+    var2=second.head
+    
+    new=LinkedList()
+    while True:
+        if var1:
+            new.appendvalue(var1.value)
+            var1=var1.next
+        
+        if var2:
+            new.appendvalue(var2.value)
+            var2=var2.next
+        
+        if not var1 and not var2 :
+            break
+
+    return new
+
+
+
+if __name__ == "__main__":
+    first=LinkedList()
+    second=LinkedList()
+    first.appendvalue(11)
+    first.appendvalue(12)
+    first.appendvalue(13)
+    first.appendvalue(14)
+
+    second.appendvalue(21)
+    second.appendvalue(22)
+    second.appendvalue(23)
+    second.appendvalue(24)
+
+    new=zip_lists(first,second)
+    print(new)
+    sec=new.__str__
+    print(sec)
