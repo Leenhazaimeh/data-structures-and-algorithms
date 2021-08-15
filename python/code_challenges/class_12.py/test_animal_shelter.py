@@ -1,6 +1,6 @@
 import pytest
-from back import *
-from class_12.animal_shelter import *
+
+from animal_shelter import *
 
 
 

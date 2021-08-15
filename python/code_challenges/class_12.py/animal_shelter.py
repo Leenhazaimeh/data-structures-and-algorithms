@@ -1,4 +1,4 @@
-from class10.stack_and_queue import Queue
+from new_qeue import *
 
 class AnimalShelter:
   def __init__(self) :
