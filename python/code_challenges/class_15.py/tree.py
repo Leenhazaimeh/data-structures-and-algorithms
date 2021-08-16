@@ -12,7 +12,7 @@ class Binary_tree:
     self.post_values = []
 
   def pre_order(self):
-    """ Pre-order traversal of our tree """
+  
     def walk(root):
       self.pre_values.append(root.value)
 
@@ -27,7 +27,7 @@ class Binary_tree:
 
 
   def in_order(self):
-    """ Pre-order traversal of our tree """
+    
     def walk(root):
 
       if root.left:
@@ -42,7 +42,7 @@ class Binary_tree:
     return self.in_values
   
   def post_order(self):
-    """ Pre-order traversal of our tree """
+    
     def walk(root):
 
       if root.left:

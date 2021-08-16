@@ -26,7 +26,7 @@ class Binary_tree:
     return self.pre_values
 
   def in_order(self):
-    """ Pre-order traversal of our tree """
+  
     def walk(root):
 
       if root.left:
@@ -41,7 +41,7 @@ class Binary_tree:
     return self.in_values
   
   def post_order(self):
-    """ Pre-order traversal of our tree """
+    
     def walk(root):
 
       if root.left:
@@ -56,7 +56,7 @@ class Binary_tree:
     return self.post_values
 
   def find_maximum_value(self):
-    """return the maximum value stored in the tree"""
+    
     if self.root: 
       self.max_val = self.root.value
     else:
