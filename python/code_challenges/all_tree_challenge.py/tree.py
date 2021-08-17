@@ -98,7 +98,7 @@ def breadth_first(tree):
             
         return node_list    
                     #code challeng 15 part 2
-class  Binary_Search (BinaryTree) : 
+class  Binary_Search (Binary_tree) : 
 
     def add(self,value) : 
         if self.root: 
@@ -136,3 +136,15 @@ class  Binary_Search (BinaryTree) :
                     return True
             return False
         return throgh_in(self.root)
+
+root = tree_node(2)
+root.left = tree_node(7)
+root.right = tree_node(5)
+root.left.left = tree_node(2)
+root.left.right = tree_node(6)
+root.right.right = tree_node(9)
+root.left.right.left = tree_node(5)
+root.left.right.right = tree_node(11)
+root.right.right.left = tree_node(4)
+
+breadthfirst(root)
