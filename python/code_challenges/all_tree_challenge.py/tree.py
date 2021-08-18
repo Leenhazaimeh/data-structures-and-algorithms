@@ -96,7 +96,32 @@ def breadth_first(tree):
                 node_list += [ tree_list.pop(0).value]
 
             
-        return node_list    
+        return node_list  
+#code challeng 18
+        def fizz_buzz_tree(kary):
+          my_fbuz = BinaryTree()
+
+        def throgh_in(node):
+         if node != None:
+            if node.value % 3 == 0 and node.value % 5 == 0:
+                my_fbuz_node = Node("FizzBuzz")
+            elif node.value % 3 == 0:
+                my_fbuz_node = Node("Fizz")
+            elif node.value % 5 == 0:
+                my_fbuz_node = Node("Buzz")
+            else:
+                my_fbuz_node = Node(str(node.value))
+
+            if node.left:
+                my_fbuz_node.left = throgh_in(node.left)
+            if node.right:
+                my_fbuz_node.right = throgh_in(node.right)
+
+            return my_fbuz_node
+
+        my_fbuz.root = throgh_in(kary.root)
+
+        return my_fbuz
                     #code challeng 15 part 2
 class  Binary_Search (Binary_tree) : 
 
@@ -148,3 +173,6 @@ root.left.right.right = tree_node(11)
 root.right.right.left = tree_node(4)
 
 breadthfirst(root)
+
+my_fbuz = fizz_buzz_tree(kary)
+print(my_fbuz.pre_order())
