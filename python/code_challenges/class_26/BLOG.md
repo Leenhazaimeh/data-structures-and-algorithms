@@ -40,6 +40,3 @@ def insertion_sort(arr):
 > - using while loop to check element of the array and compare them with other and replace the index and decrease j by one
 > - replace the array [j+1] to the key
 
-[Insertion Sort](https://miro.com/app/board/o9J_lG44R2c=/)
-
-![Insertion Sort](../../assets/insretion_sort.jpg)
