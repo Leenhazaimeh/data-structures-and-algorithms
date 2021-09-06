@@ -25,12 +25,18 @@ class Binary_Tree:
     
 
   def pre_order(self):
+all_trees
        
             try:
                 self.nodes=[]
             
                 if self.root == None:
                     return "error"
+
+  
+    def walk(root):
+      self.pre_values.append(root.value)
+ main
 
                 def tree(node):
                   self.nodes+=[node.data]
@@ -48,6 +54,12 @@ class Binary_Tree:
     
 
 
+ all_trees
+
+  def in_order(self):
+    
+    def walk(root):
+ main
 
 
 
@@ -73,6 +85,7 @@ class Binary_Tree:
 
     
   def post_order(self):
+all_trees
     #  post order which returns an array of the values, ordered appropriately
         try:
 
@@ -101,6 +114,10 @@ class Binary_Tree:
         if not self.root:
                 return 'No tree found'
         self.myMaxTree=self.root.data
+
+    
+    def walk(root):
+ main
 
 
         def  ordered (node):

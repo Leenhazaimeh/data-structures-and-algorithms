@@ -31,5 +31,14 @@ To run your tests
 [Challenge 02 - array-insert-shift](./python/code_challenges/class2.py/Readme.md)
 
 
+ stack-queue-pseudo
 
 [Challenge 10 - stack-and-queue](python/code_challenges/class10.py/Readme.md)
+
+[Challenge 03 - array-binary-search](./python/code_challenges/class3.py/Readme.md)
+
+[Challenge 04 - linked-list](./python/code_challenges/linked_list/Readme.md)
+
+
+[Challenge 08 - linked-list-zip](./python/code_challenges/linked_list_zip/README.md)
+ main
