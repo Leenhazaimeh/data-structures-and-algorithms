@@ -1,4 +1,3 @@
-
 '''''''''
 Create a Node class that has properties 
 for the data stored in the node,
@@ -25,18 +24,12 @@ class Binary_Tree:
     
 
   def pre_order(self):
-all_trees
        
             try:
                 self.nodes=[]
             
                 if self.root == None:
                     return "error"
-
-  
-    def walk(root):
-      self.pre_values.append(root.value)
- main
 
                 def tree(node):
                   self.nodes+=[node.data]
@@ -54,12 +47,6 @@ all_trees
     
 
 
- all_trees
-
-  def in_order(self):
-    
-    def walk(root):
- main
 
 
 
@@ -85,7 +72,6 @@ all_trees
 
     
   def post_order(self):
-all_trees
     #  post order which returns an array of the values, ordered appropriately
         try:
 
@@ -114,10 +100,6 @@ all_trees
         if not self.root:
                 return 'No tree found'
         self.myMaxTree=self.root.data
-
-    
-    def walk(root):
- main
 
 
         def  ordered (node):
@@ -160,7 +142,7 @@ all_trees
 
   def fizz_buzz_tree (self):
         root = self.root
-        new_fbt = Binary_Tree ()
+        My_Fizz_buzz_T = Binary_Tree ()
 
         if not root :
             return "error"
@@ -175,17 +157,17 @@ all_trees
             else:
                 return str(node)
 
-        def walk(node):
+        def order (node):
             new_node = Node(check_fizz_buzz(node.data))
-            if node.left:
-                new_node.left = walk(node.left)
             if node.right:
-                new_node.right = walk(node.right)
+                new_node.right = order (node.right)
+            if  node.left:
+                new_node.left = order (node.left)
             return new_node
 
-        new_fbt.root = walk(root)
+        My_Fizz_buzz_T.root = order (root)
 
-        return (new_fbt)
+        return (My_Fizz_buzz_T)
 
 
 
@@ -261,6 +243,16 @@ if __name__ == '__main__':
     
    
 
-    new_FBTree = ((tree.fizz_buzz_tree()))
-    print(new_FBTree.breadth_first())
+    My_Fizz_buzz_Tree = ((tree.fizz_buzz_tree()))
+    print(My_Fizz_buzz_Tree.breadth_first())
+    #  actual=tree.max()
+
+    # print(actual)
+
+    print(tree.breadth_first())
+    # print(tree.breadth_first())
+    # tree=Binary_Search_Tree()
+    # tree.add(6)
+    # tree.add(2)
+    # tree.add(10)
    
