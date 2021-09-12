@@ -61,3 +61,8 @@ def merge(left, right, data):
 ```
 
 Sample array: [8,4,23,42,16,15]
+
+![Merg-Sort](Merge_sort_algorithm_diagram.png)
+
+![Insertion Sort](merg_sort.jpg)
+
