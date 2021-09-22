@@ -5,14 +5,15 @@ Find the maximum value stored in the tree. You can assume that the values stored
 
 
 ## Whiteboard Process
-![Challenge 16 - tree-max](Capturecc15.PNG)
+![Challenge 16 - tree-max](Untitled(19).jpg)
 
 ## Approach & Efficiency
-[Challenge 16 - tree-max](./tree_max.py)
 
+Time:O(1)
+space:O(n)
 ## Solution
 
-
+[Challenge 16 - tree-max](./tree_max.py)
 
 
 
